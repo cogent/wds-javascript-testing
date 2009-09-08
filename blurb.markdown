@@ -12,4 +12,4 @@ Mike and Rob both work for Cogent Consulting, a small company passionate about e
 
 Mike has been developing software for about 20 years, in New Zealand, the UK and Australia.  He became interested in eXtreme Programming and Test-Driven Development in 2001, shortly after moving to Australia, and has been promoting agile approaches to software development since then.  Mike was an early contributer to Selenium, a popular web-application testing tool.
 
-Rob [... please fill this gap ...]
+Rob got exposed to Agile Software Development in 2001 and since has been a strong advocate of TDD and lightweight testing of software, allowing quick feedback. He has extensive experience in writing and testing web applications as well as leading teams to deliver quality software.
