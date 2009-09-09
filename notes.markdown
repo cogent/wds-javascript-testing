@@ -29,11 +29,28 @@ Mike and Rob
 - Selenium, Watir, etc etc, are NOT unit-testing tools
 - You need a bit of both, but more unit-tests
 
+## The Good Testing Pyramid
+
+- FEW end-to-end "system" tests 
+  - like military cyborgs
+    - big, powerful, BUT complex, slow
+- MORE component tests
+- MOST unit tests
+  - like 5-year olds at a birthday party
+    - fast, agile
+    - running single-mindedly towards to chocolate biscuits and red cordial
+
 ## Javascript testing guidelines
 
 - Write less code
 - Test the things that are most likely to break
 - Favour tests that run fast
+
+## Good Feedback
+
+- Rapid
+- Reliable
+- Relevant
 
 ## Unobtrusive JS improves testability
 
