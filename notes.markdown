@@ -23,7 +23,7 @@ Mike and Rob
   
 - Value of automation goes up with frequency of releases
 - Corollary: NOT automating might be fine, if you're not releasing frequently
-  
+
 ## Javascript unit-tests vs browser-driven integration tests
 
 - Selenium, Watir, etc etc, are NOT unit-testing tools
@@ -37,13 +37,14 @@ Mike and Rob
 - MORE component tests
 - MOST unit tests
   - like 5-year olds at a birthday party
-    - fast, agile
-    - running single-mindedly towards to chocolate biscuits and red cordial
+    - running single-mindedly towards the chocolate cake and red cordial
 
 ## Javascript testing guidelines
 
-- Write less code
-- Test the things that are most likely to break
+Two rules:
+
+- Test the things that are most likely to break (without you realising)
+
 - Favour tests that run fast
 
 ## Good Feedback
@@ -57,11 +58,12 @@ Mike and Rob
 - Test "behaviour" once, then declaratively add it to DOM elements
 - Makes it easier to get your JS code running in a static HTML "fixture"
 
-## Things to watch out for
-
-- Fragile tests
-
 ## Which Javascript unit-testing framework should I use?
 
 - Well, I dunno!
 - We like ScrewUnit
+
+## Headless execution
+
+- Easier integration into an automated "build" process
+- Faster (no rendering)
