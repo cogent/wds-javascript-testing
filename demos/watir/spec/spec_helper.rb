@@ -7,7 +7,7 @@ $LOAD_PATH << File.dirname(__FILE__)
 
 require "app_server"
 
-dinobrowse_config = File.join(File.dirname(__FILE__), "..", "dinobrowse", "config.ru")
+dinobrowse_config = File.join(File.dirname(__FILE__), "..", "..", "..", "dinobrowse", "config.ru")
 dinobrowse_server = AppServer.new(dinobrowse_config)
 
 Spec::Runner.configure do |config|
