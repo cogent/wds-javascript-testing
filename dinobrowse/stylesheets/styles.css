@@ -1,0 +1,27 @@
+body,
+html {
+  margin:0;
+  padding:0;
+}
+
+#wrap {
+ margin:0 auto;
+}
+
+.clear { clear: both; height: 0; }
+
+#content {
+  margin:0 15px 15px 15px;
+  float:left;
+  width: 70%;
+}
+
+#favourites {
+  position: fixed;
+  right: 0;
+  width: 350px; 
+  height: 250px; 
+  padding: 0 0.5em 0.5em 0.5em; 
+  margin: 0 10px 10px 10px;
+  border: solid thin grey;
+}
