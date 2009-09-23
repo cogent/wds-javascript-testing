@@ -1,0 +1,27 @@
+- sample first Screw.Unit test
+
+- Compare manual vs automated testing effort on the "Why automate?" slide
+- Slide: "Fear"
+- Slide: "Why automate?" - show growth in amount of JavaScript in a typical web-app
+
+- sample first browser test
+
+- AJAX implementation
+- AJAX unit test
+- AJAX browser test
+
+- unobtrusive JS example
+
+- drag-and-drop implementation
+- drag-and-drop unit test
+- drag-and-drop browser test
+
+- Slide: env.js + Rhino
+- demonstrate env.js + Rhino
+
+- Slide: "Celerity"
+- demo of Celerity
+
+- Slide: "TestSwarm"
+
+- style the demo app (so it looks professional)
