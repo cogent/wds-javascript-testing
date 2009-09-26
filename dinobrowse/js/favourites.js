@@ -27,7 +27,9 @@ Favourites.prototype = {
 		  this._headerElement().append(ul);
 		}
 		$(this.dinosaurs).each(function() {
-			ul.append('<li>' + this.getName() + '</li>')
+			if (ul.find("li:contains(" + this.getName() + ")").length == 0) {
+				ul.append('<li>' + this.getName() + '</li>');
+			}
 		})
 	},
 	

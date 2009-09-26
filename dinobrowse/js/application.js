@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	favourites = new Favourites();
+	favourites = new Favourites($("#favourites"));
 
 	$(".dinosaur_image").draggable({
 		helper: 'clone'
@@ -8,11 +8,14 @@ $(document).ready(function() {
 	$("#favourites").droppable({
 		drop: function(event, ui) {
 			var draggable = ui.draggable;
-			var dinosaur = new Dinosaur($(draggable).parent());
+			var dinosaur = new Dinosaur($(draggable).parent().parent());
 			favourites.addDinosaur(dinosaur);
-			$("<p>" + dinosaur.getName() + "</p>").insertAfter($("#favourites").find("h3"));
+			favourites.refresh();
 		}
 	});
-	
+
+	$('div.dinosaur > h2').click(function(){
+		$(this).next().toggle();
+	});
 });
 

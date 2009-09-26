@@ -25,3 +25,11 @@ html {
   margin: 0 10px 10px 10px;
   border: solid thin grey;
 }
+
+.dinosaur_content {
+  display:none;
+}
+
+.dinosaur h2 {
+	cursor: pointer;
+}
