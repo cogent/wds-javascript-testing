@@ -18,10 +18,31 @@ html {
 
 #favourites {
   position: fixed;
-  right: 0;
+  right: 15px;
   width: 350px; 
   height: 250px; 
-  padding: 0 0.5em 0.5em 0.5em; 
+  padding: 0.5em 0.5em 0.5em 0.5em; 
   margin: 0 10px 10px 10px;
   border: solid thin grey;
+}
+
+#favourites h3{
+  display:inline;
+  padding: 0 10px 0 0;
+}
+
+#favourites span{
+}
+
+.dinosaur_content {
+  display:none;
+}
+
+.dinosaur h2 {
+  cursor: pointer;
+}
+
+.dinosaur_image {
+  float:left;	
+  padding: 0 0.5em 0.5em 0; 
 }
