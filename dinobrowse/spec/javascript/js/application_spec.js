@@ -17,6 +17,16 @@ Screw.Unit(function() {
 		
 	  });
 
+	  describe("adding to favourites", function() {
+		before(function() {
+		  $(".add_to_favourites_link").click();
+		});
+		
+		it("should make a call to add dinosaur", function() {
+		  expect(favourites.getNumberOfDinosaurs()).to(equal, 1);
+		});
+		
+	  });
   });
   
 });

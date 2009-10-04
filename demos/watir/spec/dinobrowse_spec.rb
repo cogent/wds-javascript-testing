@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + '/spec_helper'
+require 'safariwatir/scripter'
 
 describe "DinoBrowse" do
 
@@ -11,8 +12,8 @@ describe "DinoBrowse" do
   end
   
   it %(can select a dinosaur to see more details) do
-    # $browser.h2(:text, 'Triceratops').click
-    puts $browser.methods.sort
-    # $browser.div(:text, 'Triceratops').click
+    $browser.span(:class, 'dinosaur_name').click
+    puts $browser.div(:class, 'dinosaur').methods.sort
+    
   end
 end

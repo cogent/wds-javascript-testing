@@ -9,13 +9,10 @@ Favourites.prototype = {
 	},
 
 	addDinosaur: function(dinosaur) {
-		var found = false;
-		for (var i in this.dinosaurs) {
-			if (this.dinosaurs[i].getName() == dinosaur.getName()) {
-				found = true;
-			};
-		}
-		if (!found) {
+		var found = $.grep(this.dinosaurs, function(element, index) {
+			return dinosaur.equals(element);
+		});
+		if (found.length == 0) {
 			this.dinosaurs.push(dinosaur);
 		}
 	},

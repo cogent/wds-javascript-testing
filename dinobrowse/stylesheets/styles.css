@@ -29,11 +29,9 @@ html {
 #favourites h3{
   display:inline;
   padding: 0 10px 0 0;
-/*	float:left;*/
 }
 
 #favourites span{
-/*	float:left;*/
 }
 
 .dinosaur_content {
@@ -41,5 +39,10 @@ html {
 }
 
 .dinosaur h2 {
-	cursor: pointer;
+  cursor: pointer;
+}
+
+.dinosaur_image {
+  float:left;	
+  padding: 0 0.5em 0.5em 0; 
 }

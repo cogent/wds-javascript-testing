@@ -17,7 +17,7 @@ Screw.Unit(function() {
 	  describe("adding a dinosaur", function() {
 		
 		before(function() {
-		  dinosaur = { getName: function() { return "Apatosaurus" } }
+		  dinosaur = { equals: function() { return true } }
 		  favourites.addDinosaur(dinosaur);
 		});
 		

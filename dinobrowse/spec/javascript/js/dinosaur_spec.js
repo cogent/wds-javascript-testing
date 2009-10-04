@@ -10,6 +10,12 @@ Screw.Unit(function() {
       expect(dinosaur.getName()).to(equal, 'Test Dinosaur');
     });
 
+	it("equals another dinosaur by name", function() {
+	  var anotherDinosaur = {};
+	  new Smoke.Stub(anotherDinosaur,'getName').and_return('Test Dinosaur');
+	  expect(dinosaur.equals(anotherDinosaur)).to(be_true);
+	});
+	
 	after(function() {
 	  $(".dinosaur > h2").empty();
 	});
