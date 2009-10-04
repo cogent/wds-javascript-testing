@@ -9,11 +9,15 @@ Favourites.prototype = {
 	},
 
 	addDinosaur: function(dinosaur) {
-		this.dinosaurs.push(dinosaur);
-	},
-	
-	getDinosaurs: function() {
-		return this.dinosaurs;
+		var found = false;
+		for (var i in this.dinosaurs) {
+			if (this.dinosaurs[i].getName() == dinosaur.getName()) {
+				found = true;
+			};
+		}
+		if (!found) {
+			this.dinosaurs.push(dinosaur);
+		}
 	},
 	
 	refresh: function() {
@@ -21,20 +25,17 @@ Favourites.prototype = {
 	},
 	
 	render: function() {
-		var ul = this.element.find('ul');
+		var ul = this.element.find('ol');
 		if (ul.size() == 0) {
-		  ul = $('<ul/>');
-		  this._headerElement().append(ul);
+		  ul = $('<ol/>');
+		  $("#favourites_content").append(ul);
 		}
 		$(this.dinosaurs).each(function() {
 			if (ul.find("li:contains(" + this.getName() + ")").length == 0) {
 				ul.append('<li>' + this.getName() + '</li>');
 			}
-		})
-	},
-	
-	_headerElement: function() {
-		return $(this.element).find('h3');
+		});
+		$("#favourites_count").html(this.getNumberOfDinosaurs());
 	}
 };
 
