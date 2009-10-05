@@ -10,6 +10,7 @@ $(document).ready(function() {
 	$(".wikipedia_link").click(function() {
 		$.getJSON("http://en.wikipedia.org/w/api.php/?action=query&prop=links&titles=Ankylosaurus&format=json&jsoncallback=?",
 			function(data){
+				console.log(data);
 				// $.each(data.items, function(i,item){
 				// 	console.log(item);
 				// });	

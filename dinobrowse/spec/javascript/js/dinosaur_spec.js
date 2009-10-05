@@ -11,8 +11,8 @@ Screw.Unit(function() {
     });
 
 	it("equals another dinosaur by name", function() {
-	  var anotherDinosaur = {};
-	  new Smoke.Stub(anotherDinosaur,'getName').and_return('Test Dinosaur');
+	  var anotherDinosaur = new Dinosaur();
+	  new Smoke.Stub(anotherDinosaur, 'getName').and_return('Test Dinosaur');
 	  expect(dinosaur.equals(anotherDinosaur)).to(be_true);
 	});
 	

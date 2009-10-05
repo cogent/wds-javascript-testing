@@ -17,7 +17,6 @@ Screw.Unit(function() {
 	  describe("adding a dinosaur", function() {
 		
 		before(function() {
-		  dinosaur = { equals: function() { return true } }
 		  favourites.addDinosaur(dinosaur);
 		});
 		
@@ -26,6 +25,7 @@ Screw.Unit(function() {
 		});
 		
 		it("can not add a dinosaur if it already exists", function() {
+		  dinosaur = { equals: function() { return true } }
 		  favourites.addDinosaur(dinosaur);
 		  expect(favourites.getNumberOfDinosaurs()).to(equal, 1);
 		});
