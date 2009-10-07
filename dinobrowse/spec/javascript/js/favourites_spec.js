@@ -2,7 +2,7 @@ Screw.Unit(function() {
   describe("Favourites", function() {
 
 	  before(function() {
-	    $('#favourites').append($('<div id="favourites_header"><span id="favourites_count"/></div><div id="favourites_content/></div>'));
+	    $('#favourites').append($('<div id="favourites_header"><span id="favourites_count"/></div><div id="favourites_content"/>'));
 		favourites = new Favourites($("#favourites"));
 	  });
 	
