@@ -6,9 +6,16 @@ $(document).ready(function() {
 		favourites.addDinosaur(dinosaur);
 		favourites.refresh();
 	});
+		
+	$(".dinosaur").addClass("collapsed");
 	
-	$('div.dinosaur > h2').click(function(){
-		$(this).next().toggle();
+	$(".dinosaur:first").removeClass("collapsed");
+	
+	$('#links a').click(function(){
+		$(".dinosaur").not(".collapsed").addClass("collapsed");
+		var name = $(this).html();
+		$(".dinosaur h2 a[name='" + name + "']").parent().parent().removeClass("collapsed");
 	});
+	
 });
 
