@@ -11,3 +11,4 @@ $(document).ready(function() {
 		$(this).next().toggle();
 	});
 });
+

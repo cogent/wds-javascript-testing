@@ -23,7 +23,7 @@ html {
   height: 250px; 
   padding: 0.5em 0.5em 0.5em 0.5em; 
   margin: 0 10px 10px 10px;
-  border: solid thin grey;
+/*  border: solid thin grey;*/
 }
 
 #favourites h3{

@@ -1,7 +1,7 @@
 Screw.Unit(function() {
   describe("Application", function() {
 	
- 	  it("be default content is invisible", function() {
+ 	  it("by default content is invisible", function() {
 		expect($('.dinosaur_content').css('display')).to(equal, 'none');
 	  });
 	
@@ -18,6 +18,7 @@ Screw.Unit(function() {
 	  });
 
 	  describe("adding to favourites", function() {
+
 		before(function() {
 		  $(".add_to_favourites_link").click();
 		});

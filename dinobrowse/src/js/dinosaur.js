@@ -1,5 +1,8 @@
 function Dinosaur(element) {
 	this.element = element;
+	if (!element.find('h2')) {
+		throw new Error('invalid');
+	}
 };
 
 Dinosaur.prototype = {
