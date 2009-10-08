@@ -1,14 +1,20 @@
 require "spec/rake/spectask"
 
-Spec::Rake::SpecTask.new(:spec) do |spec|
-  spec.libs << 'spec'
+task :default => "spec:javascript"
+  
+desc "Run the JavaScript tests (in Safari)"
+task "spec:javascript" do
   sh("screwdriver spec/javascript/suite.html --browser Safari")
 end
 
-task :headless do
+desc "Run the JavaScript tests (in Rhino)"
+task "spec:javascript:headless" do
   base_dir = "spec/vendor"
   sh "java -jar #{File.join(base_dir, 'js.jar')} -w -debug #{File.join(base_dir, 'rhino', 'runner.js')}"  
-  # sh("screwdriver spec/javascript/suite.html --browser Safari")
 end
 
-# task :default => :spec
+desc "Run the Watir tests (in Safari)"
+Spec::Rake::SpecTask.new("spec:watir") do |spec|
+  spec.libs << 'spec'
+  spec.spec_files = FileList['spec/**/*_spec.rb']
+end

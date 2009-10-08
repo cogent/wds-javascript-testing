@@ -15,4 +15,4 @@ end
 
 use DefaultToIndex
 
-run Rack::File.new(File.dirname(__FILE__))
+run Rack::File.new(File.dirname(__FILE__) + "/src")
