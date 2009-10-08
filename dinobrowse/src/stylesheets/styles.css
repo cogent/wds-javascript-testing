@@ -35,12 +35,11 @@ h1 {
 }
 
 #favourites {
-  position: fixed;
-  right: 15px;
-  width: 350px; 
-  height: 250px; 
-  padding: 0.5em 0.5em 0.5em 0.5em; 
-  margin: 0 10px 10px 10px;
+  position: absolute;
+	width: 12em;
+	top: 5px;
+	right: 5px;
+	padding: 0;
 }
 
 #favourites h3 {
