@@ -4,45 +4,53 @@ html {
   padding:0;
 }
 
-#wrap {
- margin:0 auto;
-}
-
 .clear { clear: both; height: 0; }
 
+#header {
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+#main {
+  position: relative;
+  
+}
+
 #content {
-  margin:0 15px 15px 15px;
-  float:left;
-  width: 70%;
+  margin: 0 15em 0 15em;
+  width: auto;
+	padding: 0 1em;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+#links {
+	position: absolute;
+	width: 11em;
+	top: 5px;
+	left: 5px;
+	padding: 0 1em;
 }
 
 #favourites {
-  position: fixed;
-  right: 15px;
-  width: 350px; 
-  height: 250px; 
-  padding: 0.5em 0.5em 0.5em 0.5em; 
-  margin: 0 10px 10px 10px;
-  border: solid thin grey;
+	position: absolute;
+	width: 11em;
+	min-height: 200px;
+	top: 5px;
+	right: 5px;
+	padding: 1em;
 }
 
-#favourites h3{
+#favourites h3 {
   display:inline;
   padding: 0 10px 0 0;
-}
-
-#favourites span{
-}
-
-.dinosaur_content {
-  display:none;
 }
 
 .dinosaur h2 {
   cursor: pointer;
 }
 
-.dinosaur_image {
-  float:left;	
-  padding: 0 0.5em 0.5em 0; 
+.dinosaur .picture {
+  width: 100%;
+  text-align: center;
 }
