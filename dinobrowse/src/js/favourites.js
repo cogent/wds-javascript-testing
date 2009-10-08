@@ -29,7 +29,7 @@ Favourites.prototype = {
 		}
 		$(this.dinosaurs).each(function() {
 			if (ul.find("li:contains(" + this.getName() + ")").length == 0) {
-				ul.append('<li><span>' + this.getName() + '</span><span>' + this.getRating() + '</span></li>');
+				ul.append('<li>' + this.getName() + '</li>');
 			}
 		});
 	}

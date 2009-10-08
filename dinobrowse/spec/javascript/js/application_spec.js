@@ -15,18 +15,12 @@ Screw.Unit(function() {
 
 	  describe("selecting a dinosaur", function() {
 		
-		  before(function() {
-			$('.dinosaur:last > h2').html('<a name="Ankylosaurus">Ankylosaurus</a>');
-			$("#links a[href='#Ankylosaurus']").trigger('click');
-		  });
+		before(function() {
+		  $("#links a:last").trigger('click');
+		});
 		  
-		  it("should make the content visible", function() {
-			expect($('.dinosaur:last').hasClass('collapsed')).to(be_false);
-		  });
-		
-		after(function(){
-		  $("#links").empty();
-		  $('div.dinosaur:last > h2').empty();
+		it("should make the content visible", function() {
+		  expect($('.dinosaur:last').hasClass('collapsed')).to(be_false);
 		});
 		
 	  });

@@ -10,10 +10,6 @@
     <script type="text/javascript" src="../vendor/screw-unit/lib/screw.events.js"></script>
     <script type="text/javascript" src="../vendor/screw-unit/lib/screw.behaviors.js"></script>
 
-    <script type="text/javascript" src="../vendor/smoke/lib/smoke.core.js"></script>
-    <script type="text/javascript" src="../vendor/smoke/lib/smoke.mock.js"></script>
-    <script type="text/javascript" src="../vendor/smoke/lib/smoke.stub.js"></script>
-
 	<script type="text/javascript" src="../../src/js/jquery-1.3.2.min.js"></script>
 	<script type="text/javascript" src="../../src/js/jquery-ui-1.7.2.custom.min.js"></script>
     <script type="text/javascript" src="../../src/js/dinosaur.js"></script>
@@ -29,21 +25,34 @@
 
   </head>
   <body>
-	<div id="fixtures" style="position: absolute; left: -9999">
+
+	<div id="fixtures">
+	</div>
+
+	<div id="template_fixtures" style="display: none">
 		<div id="content">
 			<div class="dinosaur">
-				<h2></h2>
+		        <h2><a name="Dino1">Dino1</a></h2>
 				<div class="dinosaur_content">
 					<image src="" class="dinosaur_image" />
 					<a href="#" class="add_to_favourites_link"></a>
 				</div>
 			</div>
 			<div class="dinosaur">
-				<h2></h2>
+		        <h2><a name="Dino2">Dino2</a></h2>
 			</div>
 		</div>
-	    <div id="links"><ul><li><a href="#Ankylosaurus">Ankylosaurus</a></li></ul></div>
-		<div id="favourites" style="position: absolute; left: -9999"></div>
+		<div id="links">
+			<ul>
+				<li><a href="#Dino1">Dino1</a></li>
+				<li><a href="#Dino2">Dino2</a></li>
+			</ul>
+		</div>
+		<div id="favourites">
+			<h3>Favourites</h3>
+			<div id="favourites_content"/>
+		</div>
 	</div>
+
   </body>
 </html>
