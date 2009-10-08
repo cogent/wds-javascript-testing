@@ -11,9 +11,4 @@ describe "DinoBrowse" do
     $browser.title.should == %(Jonah's Dinosaurs)
   end
   
-  it %(can select a dinosaur to see more details) do
-    $browser.span(:class, 'dinosaur_name').click
-    puts $browser.div(:class, 'dinosaur').methods.sort
-    
-  end
 end
