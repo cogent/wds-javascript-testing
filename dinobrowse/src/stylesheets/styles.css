@@ -6,14 +6,16 @@ html {
 
 .clear { clear: both; height: 0; }
 
-#header {
-  border-bottom: 1px solid gray;
+h1 {
+  margin-top: 0;
+  background: #333;
+  color: white;
   text-align: center;
+  padding: 0.6em;
 }
 
 #main {
   position: relative;
-  
 }
 
 #content {
@@ -26,19 +28,19 @@ html {
 
 #links {
 	position: absolute;
-	width: 11em;
+	width: 12em;
 	top: 5px;
 	left: 5px;
-	padding: 0 1em;
+	padding: 0;
 }
 
 #favourites {
 	position: absolute;
-	width: 11em;
+	width: 12em;
 	min-height: 200px;
 	top: 5px;
 	right: 5px;
-	padding: 1em;
+	padding: 0;
 }
 
 #favourites h3 {
