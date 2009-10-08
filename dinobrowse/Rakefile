@@ -1,0 +1,12 @@
+require "spec/rake/spectask"
+
+Spec::Rake::SpecTask.new(:spec) do |spec|
+  spec.libs << 'spec'
+  system("screwdriver spec/javascript/suite.html --browser Safari")
+end
+
+task :headless do
+  system "rlwrap java -jar #{File.join(base_dir, 'lib', 'ext', 'js.jar')} -w -debug #{File.join(base_dir, 'js', 'rhino', 'runner.js')}"  
+end
+
+task :default => :spec
