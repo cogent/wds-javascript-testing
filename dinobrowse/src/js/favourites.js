@@ -29,10 +29,9 @@ Favourites.prototype = {
 		}
 		$(this.dinosaurs).each(function() {
 			if (ul.find("li:contains(" + this.getName() + ")").length == 0) {
-				ul.append('<li>' + this.getName() + '</li>');
+				ul.append('<li><span>' + this.getName() + '</span><span>' + this.getRating() + '</span></li>');
 			}
 		});
-		$("#favourites_count").html(this.getNumberOfDinosaurs());
 	}
 };
 

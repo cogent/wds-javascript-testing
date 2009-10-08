@@ -6,6 +6,10 @@ Screw.Unit(function() {
 	  dinosaur = new Dinosaur($(".dinosaur"));
 	});
 	
+	it("has a default rating", function() {
+	  expect(dinosaur.getRating()).to(equal, 'Scary');
+	});
+	
     it("can get the name from the enclosed h2 element", function() {
       expect(dinosaur.getName()).to(equal, 'Test Dinosaur');
     });

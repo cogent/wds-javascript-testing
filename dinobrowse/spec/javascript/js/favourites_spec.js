@@ -2,7 +2,7 @@ Screw.Unit(function() {
   describe("Favourites", function() {
 
 	  before(function() {
-	    $('#favourites').append($('<div id="favourites_header"><span id="favourites_count"/></div><div id="favourites_content/></div>'));
+	    $('#favourites').append($('<div id="favourites_header"></div><div id="favourites_content"/>'));
 		favourites = new Favourites($("#favourites"));
 	  });
 	
@@ -35,16 +35,16 @@ Screw.Unit(function() {
 	  describe("rendering", function() {
 		
 		before(function() {
-		  favourites.addDinosaur({ getName: function() { return "Apatosaurus" } });
+		  favourites.addDinosaur({ getName: function() { return "Apatosaurus" }, getRating: function() { return "Scary" } });
 		  favourites.refresh();
 		});
 		
 		it("shows the dinosaur as a numbered list item", function() {
-		  expect($("#favourites_content > ol > li").html()).to(equal, "Apatosaurus");	
+		  expect($("#favourites_content > ol > li span:first").html()).to(equal, "Apatosaurus");	
 		});
 		
-		it("shows the favourites count", function() {
-		  expect($("#favourites_count").html()).to(equal, '1');
+		it("shows the chosen rating", function() {
+		  expect($("#favourites_content > ol > li span:last").html()).to(equal, "Scary");	
 		});
 		
 	  });
