@@ -8,6 +8,7 @@ end
 task :headless do
   base_dir = "spec/vendor"
   system "rlwrap java -jar #{File.join(base_dir, 'js.jar')} -w -debug #{File.join(base_dir, 'rhino', 'runner.js')}"  
+  # sh("screwdriver spec/javascript/suite.html --browser Safari")
 end
 
 # task :default => :spec
