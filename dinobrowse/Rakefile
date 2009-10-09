@@ -12,7 +12,6 @@ Selenium::Rake::RemoteControlStartTask.new do |rc|
   rc.wait_until_up_and_running=true
 end
 
-desc "Stop selenium server"
 Selenium::Rake::RemoteControlStopTask.new('selenium:rc:stop') do |rc|
   rc.host = "localhost"
   rc.port = 4444
@@ -39,13 +38,10 @@ Spec::Rake::SpecTask.new("spec:watir") do |spec|
 end
 
 desc "Run the Selenium tests (in Safari)"
-Spec::Rake::SpecTask.new("spec:selenium") do |spec|
-  ENV["SELENIUM_BROWSER"] = "*safari"
-  begin
-    # Rake::Task['selenium:rc:start'].invoke
-    spec.libs << 'spec'
-    spec.spec_files = FileList['spec/selenium/*_spec.rb']
-  ensure
-    # Rake::Task['selenium:rc:stop'].invoke
-  end
+task "spec:selenium" => ["selenium:rc:stop", "selenium:rc:start", "spec:selenium:execute", "selenium:rc:stop"]
+
+ENV["SELENIUM_BROWSER"] = "*safari"
+Spec::Rake::SpecTask.new("spec:selenium:execute") do |spec|
+  spec.libs << "spec"
+  spec.spec_files = FileList['spec/selenium/*_spec.rb']
 end
