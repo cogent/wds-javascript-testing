@@ -28,7 +28,7 @@ Favourites.prototype = {
 		  $("#favourites_content").append(ul);
 		}
 		$(this.dinosaurs).each(function() {
-			if (ul.find("li:contains(" + this.getName() + ")").length == 0) {
+			if (ul.find("li:contains('" + this.getName() + "')").length == 0) {
 				ul.append('<li>' + this.getName() + '</li>');
 			}
 		});

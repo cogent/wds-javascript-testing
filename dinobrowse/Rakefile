@@ -38,7 +38,7 @@ Spec::Rake::SpecTask.new("spec:watir") do |spec|
 end
 
 desc "Run the Selenium tests (in Safari)"
-task "spec:selenium" => ["selenium:rc:stop", "selenium:rc:start", "spec:selenium:execute", "selenium:rc:stop"]
+task "spec:selenium" => ["selenium:rc:start", "spec:selenium:execute", "selenium:rc:stop"]
 
 ENV["SELENIUM_BROWSER"] = "*safari"
 Spec::Rake::SpecTask.new("spec:selenium:execute") do |spec|
