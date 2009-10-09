@@ -18,7 +18,7 @@ Selenium::Rake::RemoteControlStopTask.new('selenium:rc:stop') do |rc|
   rc.timeout_in_seconds = 15
 end
   
-task :default => "spec:javascript"
+task :default => ["spec:javascript", "spec:selenium"]
 
 desc "Run the JavaScript tests (in Safari)"
 task "spec:javascript" do
