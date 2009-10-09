@@ -22,12 +22,12 @@ end
 
 Spec::Runner.configure do |config|
 
-  config.before(:all) do
+  config.prepend_before(:suite) do
     dinobrowse_server.start
     $browser = open_browser
   end
 
-  config.after(:all) do
+  config.append_after(:suite) do
     begin
       $browser.close_current_browser_session
     ensure

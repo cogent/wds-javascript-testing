@@ -12,7 +12,15 @@ describe "DinoBrowse" do
   
   describe "select a dinosaur" do
     before do
-      $browser.click("link=Apatosaurus")
+      $browser.click("css=#links a[href='#Apatosaurus']")
+    end
+    
+    it "should display content" do
+      $browser.visible?("css=div#apatosaurus").should be_true
+    end
+
+    it "should hide other dinosaurs" do
+      $browser.visible?("css=div#ankylosaurus").should be_false
     end
     
     it "should be able to add to favourites" do
